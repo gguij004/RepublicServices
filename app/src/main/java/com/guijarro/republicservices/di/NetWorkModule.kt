@@ -23,6 +23,19 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
+/**
+ * Dagger Hilt module that provides networking and data repository dependencies.
+ *
+ * The module includes the following functionality:
+ * - Provides the [DrivesAndRoutesApi] instance for network communication.
+ * - Provides the [Gson] instance for JSON serialization/deserialization.
+ * - Provides the [OkHttpClient] instance for making HTTP requests.
+ * - Provides the [HttpLoggingInterceptor] instance for logging network requests and responses.
+ * - Provides the [RemoteDrivesAndRoutRepository] implementation for remote data repository.
+ * - Provides the [CoroutineDispatcher] instance for managing coroutines.
+ * - Provides the [DriversAndRoutesDatabase] instance for local data storage.
+ * - Provides the [LocalDriversAndRoutsRepository] implementation for local data repository.
+ */
 @Module
 @InstallIn(SingletonComponent::class)
 class NetWorkModule {

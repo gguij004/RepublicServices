@@ -54,7 +54,7 @@ class DriversAndRoutesScreenViewModel @Inject constructor(
         }
     }
 
-    private fun getDriversAndRoutes() {
+      fun getDriversAndRoutes() {
         getDriversAndRoutsUseCase().onEach { resource ->
             if (resource is UIState.Success) {
                 unsortedDrivers = resource.data

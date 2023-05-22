@@ -1,6 +1,5 @@
 package com.guijarro.republicservices.domain.usecases
 
-import com.guijarro.republicservices.data.remote.api_dto.DriversAndRoutesResponseDto
 import com.guijarro.republicservices.domain.models.DriverModel
 import com.guijarro.republicservices.domain.repository.LocalDriversAndRoutsRepository
 import com.guijarro.republicservices.domain.repository.RemoteDrivesAndRoutRepository
@@ -48,7 +47,6 @@ class GetDriversAndRoutsUseCase @Inject constructor(
                 emit(UIState.Error(e))
             }
         }
-
 
     }.flowOn(dispatcher)
 }
